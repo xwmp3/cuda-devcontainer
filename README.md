@@ -8,6 +8,11 @@ While the definition itself works unmodified, you can select the version of CUDA
 uses by updating the `CUDA_VERSION` and `VARIANT` respectively in the included `devcontainer.json` 
 (and rebuilding if you've already created the container). The CUDA and Ubuntu version 
 has to match with image tags found [here](https://hub.docker.com/r/nvidia/cuda).
-```
+```json
 "args": { "VARIANT": "ubuntu20.04", "CUDA_VERSION": "11.6.0" }
+```
+
+## Test Container Configuration
+```shell
+nvcc main.cu -o demo && ./demo
 ```
